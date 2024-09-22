@@ -1,0 +1,9 @@
+import java.util.Scanner;
+
+public class b1016 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int distancia = sc.nextInt() * 2;
+        System.out.printf("%d minutos\n", distancia);
+    }
+}
