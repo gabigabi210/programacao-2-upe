@@ -1,0 +1,12 @@
+import java.util.Scanner;
+
+public class b1017 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int tempo = sc.nextInt();
+        int velocidadeMedia = sc.nextInt();
+        float distancia = tempo * velocidadeMedia;
+        float litros = distancia / 12;
+        System.out.printf("%.3f\n", litros);
+    }
+}
