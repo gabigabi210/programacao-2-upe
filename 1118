@@ -1,0 +1,49 @@
+import java.io.IOException;
+import java.util.Scanner;
+
+/**
+ * IMPORTANT: 
+ *      O nome da classe deve ser "Main" para que a sua solução execute
+ *      Class name must be "Main" for your solution to execute
+ *      El nombre de la clase debe ser "Main" para que su solución ejecutar
+ */
+public class Main {
+ 
+    public static void main(String[] args) throws IOException {
+ 
+        Scanner sc = new Scanner(System.in);
+        boolean repete = true;
+        double nota1;
+        double nota2;
+        double media;
+        int resposta;
+        while (repete) {
+            do {
+                nota1 = sc.nextDouble();
+                if (nota1 < 0 || nota1 > 10) {
+                    System.out.println("nota invalida");
+                }
+            } while (nota1 < 0 || nota1 > 10);
+            do {
+                nota2 = sc.nextDouble();
+                if (nota2 < 0 || nota2 > 10) {
+                    System.out.println("nota invalida");
+                }
+            } while (nota2 < 0 || nota2 > 10);
+            media = (nota1 + nota2) / 2;
+            System.out.printf("media = %.2f\n", media);
+            System.out.println("novo calculo (1-sim 2-nao)");
+            do {
+                resposta = sc.nextInt();
+                if (resposta < 1 || resposta > 2) {
+                    System.out.println("novo calculo (1-sim 2-nao)");
+                }
+            } while (resposta < 1 || resposta > 2);
+            if (resposta == 2) {
+                repete = false;
+            }
+        }
+ 
+    }
+ 
+}
