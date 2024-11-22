@@ -1,0 +1,33 @@
+import java.util.ArrayList;
+
+public class Colecoes {
+    public static void main(String[] args) {
+        ArrayList<Integer> lista = new ArrayList<>();
+        lista.add(1);
+        lista.add(2);
+        lista.add(3);
+        lista.add(4);
+        lista.add(5);
+        lista.add(6);
+        lista.add(7);
+        lista.add(8);
+        lista.add(9);
+        lista.add(10);
+        lista.add(11);
+        lista.add(1);
+        lista.add(2);
+        lista.add(3);
+        lista.add(4);
+        lista.add(5);
+        lista.add(6);
+        lista.add(7);
+        lista.stream().forEach(System.out::println);
+        System.out.println();
+        lista.stream().filter(a -> a % 2 == 0).forEach(System.out::println);
+        System.out.println();
+       // ParPredicate pred = new ParPredicate();
+       // lista.stream().filter(pred).forEach(System.out::println);
+        lista.stream().distinct().limit(5).map(v -> v + "abc").forEach(System.out::println);
+
+    }
+}
